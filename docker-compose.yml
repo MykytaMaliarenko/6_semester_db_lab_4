@@ -27,11 +27,11 @@ services:
       - mongodb
     volumes:
       - ./src:/usr/app/src
-#    deploy:
-#      restart_policy:
-#        condition: on-failure
-#        delay: 5s
-#        max_attempts: 3
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
 
 volumes:
   mongodb:
